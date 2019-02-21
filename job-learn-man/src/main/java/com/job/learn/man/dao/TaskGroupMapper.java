@@ -19,4 +19,11 @@ public interface TaskGroupMapper {
 
     public List<TaskGroup> findByAddressType(@Param("addressType") int addressType);
 
+    public int saveTaskGroup(TaskGroup taskGroup);
+
+    public int updateTaskGroup(TaskGroup taskGroup);
+
+    public int remove(@Param("id") int id);
+
+
 }
