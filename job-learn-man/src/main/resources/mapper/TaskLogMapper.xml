@@ -112,7 +112,7 @@
     </trim>
     </select>
 
-    <insert id="saveLog" parameterType="com.learn.job.core.executor.domain.TaskLoG" useGeneratedKeys="true" keyProperty="id" >
+    <insert id="saveLog" parameterType="com.learn.job.core.executor.domain.TaskLog" useGeneratedKeys="true" keyProperty="id" >
         INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOG (
         `job_group`,
         `job_id`,

@@ -141,7 +141,7 @@
         WHERE t.id = #{id}
     </select>
 
-    <update id="update" parameterType="com.learn.job.core.executor.domain.TaskInfo" >
+    <update id="updateInfo" parameterType="com.learn.job.core.executor.domain.TaskInfo" >
         UPDATE XXL_JOB_QRTZ_TRIGGER_INFO
         SET
         job_cron = #{jobCron},

@@ -31,6 +31,16 @@ public class TaskLog {
     private int handleCode;
     private String handleMsg;
 
+    // alarm info
+    private int alarmStatus;
+
+    public int getAlarmStatus() {
+        return alarmStatus;
+    }
+
+    public void setAlarmStatus(int alarmStatus) {
+        this.alarmStatus = alarmStatus;
+    }
 
     public int getId() {
         return id;

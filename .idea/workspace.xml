@@ -7,25 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6316b4-792f-425e-b5c8-b6397cc5b499" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/LogGlue.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskRegistry.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/LogGlueMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskRegistryMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/LogGlueMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskRegistryMapper.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/job-learn-exector/pom.xml" afterPath="$PROJECT_DIR$/job-learn-exector/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskGroupMapper.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskGroupMapper.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskInfoMapper.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskInfoMapper.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskLogMapper.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskLogMapper.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskGroupMapper.xml" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskGroupMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskLog.java" afterPath="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskLog.java" />
+      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/service/AdminBusinessService.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/service/AdminBusinessService.java" />
       <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml" />
       <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskGroupMapperTest.java" afterPath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskGroupMapperTest.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java" afterPath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogGlueMapperTest.java" afterPath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogGlueMapperTest.java" />
       <change beforePath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java" afterPath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskRegistryDaoTest.java" afterPath="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskRegistryDaoTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,107 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LogGlue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/LogGlue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding>
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#456#457#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#614#615#0" expanded="true" />
-                <element signature="e#649#650#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#1004#1005#0" expanded="true" />
-                <element signature="e#1056#1057#0" expanded="true" />
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1134#1135#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1210#1211#0" expanded="true" />
-                <element signature="e#1248#1249#0" expanded="true" />
-                <element signature="e#1285#1286#0" expanded="true" />
-                <element signature="e#1318#1319#0" expanded="true" />
-                <element signature="e#1370#1371#0" expanded="true" />
-                <element signature="e#1414#1415#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskLogMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskLogMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskRegistry.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskRegistry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding>
-                <element signature="e#322#323#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#408#409#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#542#543#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-                <element signature="e#630#631#0" expanded="true" />
-                <element signature="e#664#665#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#764#765#0" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#898#899#0" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="e#983#984#0" expanded="true" />
-                <element signature="e#1016#1017#0" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1110#1111#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskInfoMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="175" column="13" lean-forward="true" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
-              <folding>
-                <marker date="1550744553525" expanded="true" signature="2144:2258" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-                <marker date="1550744553525" expanded="true" signature="2364:3019" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-                <marker date="1550744553525" expanded="true" signature="3845:4749" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_INFO... " />
-                <marker date="1550744553525" expanded="true" signature="5043:5157" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-                <marker date="1550744553525" expanded="true" signature="5267:6000" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_INFO... " />
-                <marker date="1550744553525" expanded="true" signature="6087:6157" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-                <marker date="1550744553525" expanded="true" signature="6270:6397" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-                <marker date="1550744553525" expanded="true" signature="6469:6523" ph="SELECT count... XXL_JOB_QRTZ_TRIGGER_INFO" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TaskRegistryMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskRegistryMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -159,14 +45,73 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TaskInfoMapperTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TaskLogGlueMapperTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogGlueMapperTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="-129">
+              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskInfoMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskInfoMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskInfoMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="143" column="26" lean-forward="false" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+              <folding>
+                <marker date="1550750750825" expanded="true" signature="2144:2258" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+                <marker date="1550750750825" expanded="true" signature="2364:3019" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+                <marker date="1550750750825" expanded="true" signature="3845:4749" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_INFO... " />
+                <marker date="1550750750825" expanded="true" signature="5043:5157" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+                <marker date="1550750750825" expanded="true" signature="5271:6004" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_INFO... " />
+                <marker date="1550750750825" expanded="true" signature="6091:6161" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+                <marker date="1550750750825" expanded="true" signature="6274:6401" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+                <marker date="1550750750825" expanded="true" signature="6473:6527" ph="SELECT count... XXL_JOB_QRTZ_TRIGGER_INFO" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskGroupMapperTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskGroupMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskLogMapperTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -174,8 +119,8 @@
       <file leaf-file-name="TaskRegistryDaoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskRegistryDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="277">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,36 +128,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogGlueMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/LogGlueMapper.xml">
+      <file leaf-file-name="TaskLog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskLog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+            <state relative-caret-position="162">
+              <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
-                <marker date="1550744553384" expanded="true" signature="1032:1344" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
-                <marker date="1550744553384" expanded="true" signature="1600:1749" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE" />
-                <marker date="1550744553384" expanded="true" signature="1810:2092" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
-                <marker date="1550744553384" expanded="true" signature="1884:2058" ph="SELECT id FR... id" />
-                <marker date="1550744553384" expanded="true" signature="1908:2045" ph="SELECT id FR... XXL_JOB_QRTZ_TRIGGER_LOGGLUE" />
-                <marker date="1550744553384" expanded="true" signature="2180:2254" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
+                <element signature="e#773#774#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskGroupMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskGroupMapper.xml">
+      <file leaf-file-name="TaskLogMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+            <state relative-caret-position="806">
+              <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
               <folding>
-                <marker date="1550741917479" expanded="true" signature="865:979" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-                <marker date="1550741917479" expanded="true" signature="1051:1168" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_GROUP" />
-                <marker date="1550741917479" expanded="true" signature="1284:1447" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_GROUP" />
-                <marker date="1550741917479" expanded="true" signature="1607:1790" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_GROUP... " />
-                <marker date="1550741917479" expanded="true" signature="1913:2145" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_GROUP... " />
-                <marker date="1550741917479" expanded="true" signature="2252:2367" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_GROUP" />
-                <marker date="1550741917479" expanded="true" signature="2452:2515" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_GROUP... " />
+                <marker date="1550750412453" expanded="true" signature="1791:1904" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOG" />
+                <marker date="1550750412453" expanded="true" signature="1975:3095" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOG" />
+                <marker date="1550750412453" expanded="true" signature="4230:4515" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOG... " />
+                <marker date="1550750412453" expanded="true" signature="4723:5173" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
+                <marker date="1550750412453" expanded="true" signature="5233:5413" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
+                <marker date="1550750412453" expanded="true" signature="5467:5535" ph="delete from XXL_JOB_QRTZ_TRIGGER_LOG... " />
+                <marker date="1550750412453" expanded="true" signature="5950:6372" ph="SELECT DATE_... XXL_JOB_QRTZ_TRIGGER_LOG" />
+                <marker date="1550750412453" expanded="true" signature="7585:7802" ph="SELECT id FR... XXL_JOB_QRTZ_TRIGGER_LOG" />
+                <marker date="1550750412453" expanded="true" signature="7863:8017" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
               </folding>
             </state>
           </provider>
@@ -260,8 +204,11 @@
       <find>xxl-glue-core</find>
       <find>docallBack</find>
       <find>XxlJobInfo</find>
-      <find>TaskLog</find>
       <find>XxlJobLog</find>
+      <find>TaskLoG</find>
+      <find>TaskLog</find>
+      <find>updateInfo</find>
+      <find>alarmStatus</find>
     </findStrings>
     <replaceStrings>
       <replace>TaskLog</replace>
@@ -283,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/util/I18nUtil.java" />
         <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/util/FileUtil.java" />
         <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/Thread/JoblogFileCleanThread.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/trigger/TaskTrigger.java" />
@@ -298,7 +244,6 @@
         <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/JobLearnManApplication.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/static/index.html" />
-        <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/service/AdminBusinessService.java" />
         <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/enums/GlueTypeEnum.java" />
         <option value="$PROJECT_DIR$/job-learn-core/pom.xml" />
         <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/glue/GlueFactory.java" />
@@ -319,7 +264,6 @@
         <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskGroupMapper.xml" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogGlueMapper.xml" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskInfoMapper.java" />
-        <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml" />
         <option value="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskLogGlueMapper.java" />
         <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskLogGlue.java" />
@@ -327,13 +271,16 @@
         <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/LogGlueMapper.xml" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/LogGlueMapper.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogGlueMapperTest.java" />
-        <option value="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskLogMapper.java" />
-        <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml" />
         <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskRegistry.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskRegistryMapper.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskRegistryDaoTest.java" />
         <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskRegistryMapper.xml" />
+        <option value="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/service/AdminBusinessService.java" />
+        <option value="$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java" />
+        <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml" />
+        <option value="$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskLog.java" />
       </list>
     </option>
   </component>
@@ -364,11 +311,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1858" />
-    <option name="y" value="15" />
-    <option name="width" value="1862" />
-    <option name="height" value="1099" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2031" />
+    <option name="y" value="46" />
+    <option name="width" value="2148" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -597,31 +544,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TaskGroupMapperTest.test">
+  <component name="RunManager" selected="JUnit.TaskRegistryDaoTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.job.learn.man.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.test.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="job-learn-man" />
-      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -637,19 +565,19 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="JobLearnManApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskInfoMapperTest.pageList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.job.learn.man.*" />
+          <option name="PATTERN" value="com.job.learn.man.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="job-learn-man" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.job.learn.man" />
-      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.JobLearnManApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="com.job.learn.man.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.dao.TaskInfoMapperTest" />
+      <option name="METHOD_NAME" value="pageList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -662,7 +590,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TaskGroupMapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskInfoMapperTest.save_load" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.job.learn.man.dao.*" />
@@ -673,9 +601,84 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.job.learn.man.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.dao.TaskGroupMapperTest" />
+      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.dao.TaskInfoMapperTest" />
+      <option name="METHOD_NAME" value="save_load" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TaskLogGlueMapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.job.learn.man.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="job-learn-man" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.job.learn.man.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.dao.TaskLogGlueMapperTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TaskLogMapperTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.job.learn.man.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="job-learn-man" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.job.learn.man.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.dao.TaskLogMapperTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TaskRegistryDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.job.learn.man.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="job-learn-man" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.job.learn.man.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.job.learn.man.dao.TaskRegistryDaoTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -717,17 +720,6 @@
     <configuration name="JobLearnManApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.job.learn.man.JobLearnManApplication" />
-      <module name="job-learn-man" />
-      <envs />
-    </configuration>
-    <configuration name="JobRunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.learn.job.man.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.learn.job.man.JobRunApplication" />
       <module name="job-learn-man" />
       <envs />
     </configuration>
@@ -854,20 +846,22 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="6">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.JobLearnManApplication" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.spring" />
-      <item index="2" class="java.lang.String" itemvalue="Spring Boot.JobRunApplication" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JobLearnManApplicationTests.contextLoads" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TaskGroupMapperTest.test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TaskInfoMapperTest.pageList" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TaskInfoMapperTest.save_load" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TaskLogGlueMapperTest.test" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TaskLogMapperTest.test" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.TaskRegistryDaoTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TaskGroupMapperTest.test" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JobLearnManApplicationTests.contextLoads" />
-        <item index="3" class="java.lang.String" itemvalue="Spring Boot.JobRunApplication" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TaskRegistryDaoTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TaskLogMapperTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TaskLogGlueMapperTest.test" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TaskInfoMapperTest.save_load" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TaskInfoMapperTest.pageList" />
       </list>
     </recent_temporary>
   </component>
@@ -896,7 +890,7 @@
       <workItem from="1550626021142" duration="20571000" />
       <workItem from="1550660817518" duration="2227000" />
       <workItem from="1550676635161" duration="1188000" />
-      <workItem from="1550712400868" duration="17239000" />
+      <workItem from="1550712400868" duration="18572000" />
     </task>
     <task id="LOCAL-00001" summary="测试用例添加">
       <created>1550740197575</created>
@@ -905,43 +899,53 @@
       <option name="project" value="LOCAL" />
       <updated>1550740197575</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="数据库各表CRUD 方法OK 测试用例Ok">
+      <created>1550746146834</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550746146834</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JobLearnManApplicationTests_contextLoads - 2019.02.21 at 16h 40m 07s.xml">
-      <configuration name="JobLearnManApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 16m 58s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 17m 43s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 18m 54s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 20m 38s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 34m 33s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 35m 32s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 36m 24s.xml">
-      <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TaskGroupMapperTest_test - 2019.02.21 at 17h 37m 11s.xml">
       <configuration name="TaskGroupMapperTest.test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TaskInfoMapperTest_pageList - 2019.02.21 at 18h 52m 26s.xml">
+      <configuration name="TaskInfoMapperTest.pageList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskInfoMapperTest_pageList - 2019.02.21 at 20h 01m 07s.xml">
+      <configuration name="TaskInfoMapperTest.pageList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskInfoMapperTest_save_load - 2019.02.21 at 20h 01m 44s.xml">
+      <configuration name="TaskInfoMapperTest.save_load" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskInfoMapperTest_save_load - 2019.02.21 at 20h 04m 37s.xml">
+      <configuration name="TaskInfoMapperTest.save_load" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskInfoMapperTest_save_load - 2019.02.21 at 20h 06m 10s.xml">
+      <configuration name="TaskInfoMapperTest.save_load" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskLogGlueMapperTest_test - 2019.02.21 at 20h 06m 35s.xml">
+      <configuration name="TaskLogGlueMapperTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskLogMapperTest_test - 2019.02.21 at 20h 06m 49s.xml">
+      <configuration name="TaskLogMapperTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskLogMapperTest_test - 2019.02.21 at 20h 07m 57s.xml">
+      <configuration name="TaskLogMapperTest.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskRegistryDaoTest - 2019.02.21 at 20h 08m 13s.xml">
+      <configuration name="TaskRegistryDaoTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86190000" />
+    <option name="totallyTimeSpent" value="87523000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1911" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="2031" y="46" width="2148" height="1096" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -954,27 +958,27 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21097955" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6636971" sideWeight="0.49784714" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66333336" sideWeight="0.49784714" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.125" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4579646" sideWeight="0.5895923" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28" sideWeight="0.5895923" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31686747" sideWeight="0.4956943" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31625834" sideWeight="0.4956943" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45180723" sideWeight="0.6560818" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5382685" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4610245" sideWeight="0.6560818" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5377778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25555557" sideWeight="0.49576032" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22585838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25265187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10246781" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
@@ -1040,6 +1044,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -1080,8 +1110,26 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1115,27 +1163,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/job-learn-exector/job-exector-spring1/src/main/resources/spring-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="85" lean-forward="true" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/service/AdminBusinessService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="72" column="50" lean-forward="false" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/thread/TaskTriggerPoolHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.14.RELEASE/spring-core-4.3.14.RELEASE.jar!/org/springframework/core/task/TaskExecutor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1414,39 +1441,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskGroupMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.IntelliJIdea2017.3/system/extResources/b36fadae_mybatis-3-mapper.dtd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1301">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1463,17 +1462,7 @@
         <state relative-caret-position="486">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1484,7 +1473,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="10" column="63" lean-forward="true" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
           <folding>
             <marker date="1550741917479" expanded="true" signature="865:979" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
             <marker date="1550741917479" expanded="true" signature="1051:1168" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_GROUP" />
@@ -1497,70 +1486,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
-          <folding>
-            <marker date="1550745971608" expanded="true" signature="1791:1904" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOG" />
-            <marker date="1550745971608" expanded="true" signature="1975:3095" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOG" />
-            <marker date="1550745971608" expanded="true" signature="4230:4515" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOG... " />
-            <marker date="1550745971608" expanded="true" signature="4723:5173" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
-            <marker date="1550745971608" expanded="true" signature="5233:5413" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
-            <marker date="1550745971608" expanded="true" signature="5467:5535" ph="delete from XXL_JOB_QRTZ_TRIGGER_LOG... " />
-            <marker date="1550745971608" expanded="true" signature="5950:6372" ph="SELECT DATE_... XXL_JOB_QRTZ_TRIGGER_LOG" />
-            <marker date="1550745971608" expanded="true" signature="7585:7802" ph="SELECT id FR... XXL_JOB_QRTZ_TRIGGER_LOG" />
-            <marker date="1550745971608" expanded="true" signature="7863:8017" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="175" column="13" lean-forward="true" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
-          <folding>
-            <marker date="1550744553525" expanded="true" signature="2144:2258" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-            <marker date="1550744553525" expanded="true" signature="2364:3019" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-            <marker date="1550744553525" expanded="true" signature="3845:4749" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_INFO... " />
-            <marker date="1550744553525" expanded="true" signature="5043:5157" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-            <marker date="1550744553525" expanded="true" signature="5267:6000" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_INFO... " />
-            <marker date="1550744553525" expanded="true" signature="6087:6157" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-            <marker date="1550744553525" expanded="true" signature="6270:6397" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
-            <marker date="1550744553525" expanded="true" signature="6469:6523" ph="SELECT count... XXL_JOB_QRTZ_TRIGGER_INFO" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogGlueMapperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/LogGlueMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
-          <folding>
-            <marker date="1550744553384" expanded="true" signature="1032:1344" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
-            <marker date="1550744553384" expanded="true" signature="1600:1749" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE" />
-            <marker date="1550744553384" expanded="true" signature="1810:2092" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
-            <marker date="1550744553384" expanded="true" signature="1884:2058" ph="SELECT id FR... id" />
-            <marker date="1550744553384" expanded="true" signature="1908:2045" ph="SELECT id FR... XXL_JOB_QRTZ_TRIGGER_LOGGLUE" />
-            <marker date="1550744553384" expanded="true" signature="2180:2254" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding>
             <element signature="e#322#323#0" expanded="true" />
             <element signature="e#347#348#0" expanded="true" />
@@ -1638,7 +1567,40 @@
         <state relative-caret-position="324">
           <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/service/AdminBusinessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#1657#1658#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/LogGlueMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+          <folding>
+            <marker date="1550744553384" expanded="true" signature="1032:1344" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
+            <marker date="1550744553384" expanded="true" signature="1600:1749" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE" />
+            <marker date="1550744553384" expanded="true" signature="1810:2092" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
+            <marker date="1550744553384" expanded="true" signature="1884:2058" ph="SELECT id FR... id" />
+            <marker date="1550744553384" expanded="true" signature="1908:2045" ph="SELECT id FR... XXL_JOB_QRTZ_TRIGGER_LOGGLUE" />
+            <marker date="1550744553384" expanded="true" signature="2180:2254" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_LOGGLUE... " />
           </folding>
         </state>
       </provider>
@@ -1657,10 +1619,99 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="157" column="29" lean-forward="true" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+          <folding>
+            <marker date="1550750412453" expanded="true" signature="1791:1904" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOG" />
+            <marker date="1550750412453" expanded="true" signature="1975:3095" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_LOG" />
+            <marker date="1550750412453" expanded="true" signature="4230:4515" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_LOG... " />
+            <marker date="1550750412453" expanded="true" signature="4723:5173" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
+            <marker date="1550750412453" expanded="true" signature="5233:5413" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
+            <marker date="1550750412453" expanded="true" signature="5467:5535" ph="delete from XXL_JOB_QRTZ_TRIGGER_LOG... " />
+            <marker date="1550750412453" expanded="true" signature="5950:6372" ph="SELECT DATE_... XXL_JOB_QRTZ_TRIGGER_LOG" />
+            <marker date="1550750412453" expanded="true" signature="7585:7802" ph="SELECT id FR... XXL_JOB_QRTZ_TRIGGER_LOG" />
+            <marker date="1550750412453" expanded="true" signature="7863:8017" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_LOG... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskGroupMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/dao/TaskInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="33" column="25" lean-forward="false" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/mapper/TaskInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="143" column="26" lean-forward="false" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
+          <folding>
+            <marker date="1550750750825" expanded="true" signature="2144:2258" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+            <marker date="1550750750825" expanded="true" signature="2364:3019" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+            <marker date="1550750750825" expanded="true" signature="3845:4749" ph="INSERT INTO XXL_JOB_QRTZ_TRIGGER_INFO... " />
+            <marker date="1550750750825" expanded="true" signature="5043:5157" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+            <marker date="1550750750825" expanded="true" signature="5271:6004" ph="UPDATE XXL_JOB_QRTZ_TRIGGER_INFO... " />
+            <marker date="1550750750825" expanded="true" signature="6091:6161" ph="DELETE FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+            <marker date="1550750750825" expanded="true" signature="6274:6401" ph="SELECT FROM XXL_JOB_QRTZ_TRIGGER_INFO" />
+            <marker date="1550750750825" expanded="true" signature="6473:6527" ph="SELECT count... XXL_JOB_QRTZ_TRIGGER_INFO" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskInfoMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogGlueMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="e#773#774#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskLogMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/job-learn-man/src/test/java/com/job/learn/man/dao/TaskRegistryDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="277">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

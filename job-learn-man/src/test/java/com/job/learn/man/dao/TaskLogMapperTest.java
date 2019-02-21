@@ -28,7 +28,7 @@ public class TaskLogMapperTest extends BaseTest {
         log.setJobId(1);
 
         int result1 = taskLogMapper.saveLog(log);
-        TaskLog taskLog = taskLogMapper.load(log.getId());
+        TaskLog taskLog = taskLogMapper.loadById(log.getId());
 
         log.setTriggerTime(new Date());
         log.setTriggerCode(1);
@@ -37,14 +37,14 @@ public class TaskLogMapperTest extends BaseTest {
         log.setExecutorHandler("1");
         log.setExecutorParam("1");
         result1 = taskLogMapper.updateTriggerInfo(log);
-        taskLog = taskLogMapper.load(log.getId());
+        taskLog = taskLogMapper.loadById(log.getId());
 
 
         log.setHandleTime(new Date());
         log.setHandleCode(2);
         log.setHandleMsg("2");
         result1 = taskLogMapper.updateHandleInfo(log);
-        taskLog = taskLogMapper.load(log.getId());
+        taskLog = taskLogMapper.loadById(log.getId());
 
 
         List<Map<String, Object>> list2 = taskLogMapper.triggerCountByDay(DateUtils.addDays(new Date(), 30), new Date());

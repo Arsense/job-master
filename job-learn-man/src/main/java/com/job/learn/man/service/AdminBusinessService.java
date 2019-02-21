@@ -51,7 +51,7 @@ public class AdminBusinessService implements AdminBusiness {
      */
     private Result<String> callback(HandleCallbackParam handleCallbackParam) {
         //通过LogId来处理的
-        TaskLog log = taskLogMapper.load(handleCallbackParam.getLogId());
+        TaskLog log = taskLogMapper.loadById(handleCallbackParam.getLogId());
         if (log == null) {
             return new Result<String>(Result.FAIL_CODE, "log item not found.");
         }
