@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/job-learn-exector/job-exector-spring1/job-exector-spring1.iml" filepath="$PROJECT_DIR$/job-learn-exector/job-exector-spring1/job-exector-spring1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/job-learn-core/job-learn-core.iml" filepath="$PROJECT_DIR$/job-learn-core/job-learn-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/job-learn-exector/job-learn-exector.iml" filepath="$PROJECT_DIR$/job-learn-exector/job-learn-exector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/job-learn-man/job-learn-man.iml" filepath="$PROJECT_DIR$/job-learn-man/job-learn-man.iml" />
+      <module fileurl="file://$PROJECT_DIR$/job-master.iml" filepath="$PROJECT_DIR$/job-master.iml" />
+    </modules>
+  </component>
+</project>

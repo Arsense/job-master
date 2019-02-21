@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="job-exector-spring1" />
+        <module name="job-learn-core" />
+        <module name="job-learn-man" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="job-exector-spring" target="1.5" />
+      <module name="job-exector-spring1" target="1.5" />
+      <module name="job-executor-spring" target="1.5" />
+      <module name="job-learn-core" target="1.6" />
+      <module name="job-learn-exector" target="1.5" />
+      <module name="job-learn-man" target="1.6" />
+      <module name="job-master" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

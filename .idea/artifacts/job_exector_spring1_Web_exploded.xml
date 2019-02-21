@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="job-exector-spring1:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/job_exector_spring1_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="job-exector-spring1/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="job-exector-spring1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
