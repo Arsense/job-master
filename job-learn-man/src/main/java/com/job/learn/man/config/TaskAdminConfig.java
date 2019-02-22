@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
 
-/** 一个管理端配置吧
+/** 调度器配置 管理注入各种Bean
  *
  * @author tangwei
  * @date 2019/2/18 19:42

@@ -5,7 +5,7 @@ import com.job.learn.man.schedule.TaskDynmicScheduler;
 import com.learn.job.core.executor.business.BusinessExecutor;
 import com.learn.job.core.executor.domain.*;
 import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
-import com.job.learn.man.config.ExecutorRouteStrategyEnum;
+import com.job.learn.man.domain.ExecutorRouteStrategyEnum;
 import com.job.learn.man.util.I18nUtil;
 import com.xxl.rpc.util.IpUtil;
 import com.xxl.rpc.util.ThrowableUtil;

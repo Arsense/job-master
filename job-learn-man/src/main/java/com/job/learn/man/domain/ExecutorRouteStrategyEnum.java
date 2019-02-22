@@ -1,4 +1,4 @@
-package com.job.learn.man.config;
+package com.job.learn.man.domain;
 
 import com.job.learn.man.util.I18nUtil;
 import com.learn.job.core.executor.route.ExecutorRouter;
