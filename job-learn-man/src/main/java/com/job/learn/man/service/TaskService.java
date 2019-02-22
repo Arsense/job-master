@@ -1,13 +1,19 @@
 package com.job.learn.man.service;
 
-import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 /**
  * @author tangwei
  * @date 2019/2/22 13:58
  */
-@Service
-public class TaskService {
+public interface TaskService {
 
+    /**
+     * dashboard info
+     *
+     * @return
+     */
+    public Map<String,Object> dashboardInfo();
 
 }

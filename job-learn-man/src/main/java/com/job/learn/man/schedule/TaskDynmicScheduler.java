@@ -38,20 +38,20 @@ public class TaskDynmicScheduler {
      * Bean加载前调用
      */
     private void start() {
-        // valid 检验调度器是否为空
-        Assert.notNull(scheduler, "quartz scheduler is null");
-
-        // init i18n
-        initI18n();
-
-        // 运行注册监控
-        JobRegistryMonitorHelper.getInstance().start();
-
-        // 运行情况监控
-        JobFailMonitorHelper.getInstance().start();
-
-        // 初始化RPCserver
-        initRpcProvider();
+//        // valid 检验调度器是否为空
+//        Assert.notNull(scheduler, "quartz scheduler is null");
+//
+//        // init i18n
+////        initI18n();
+//
+//        // 运行注册监控
+//        JobRegistryMonitorHelper.getInstance().start();
+//
+//        // 运行情况监控
+//        JobFailMonitorHelper.getInstance().start();
+//
+//        // 初始化RPCserver
+//        initRpcProvider();
 
         logger.info(">>>>>>>>> init job 调度器管理读 启动成功admin success.");
 
