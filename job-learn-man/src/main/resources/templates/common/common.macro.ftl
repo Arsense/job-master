@@ -28,8 +28,8 @@
 	<!-- pace -->
 	<link rel="stylesheet" href="${request.contextPath}/static/adminlte/bower_components/PACE/themes/blue/pace-theme-flash.css">
 
-	<#-- i18n -->
-	<#global I18n = I18nUtil.getMultString()?eval />
+	<#--&lt;#&ndash; i18n &ndash;&gt;-->
+	<#--<#global I18n = I18nUtil.getMultString()?eval />-->
 
 </#macro>
 
