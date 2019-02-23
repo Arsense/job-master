@@ -11,6 +11,8 @@ import org.springframework.core.io.support.PropertiesLoaderUtils;
 
 import java.io.IOException;
 import java.text.MessageFormat;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 /**
@@ -32,7 +34,7 @@ public class I18nUtil {
         try {
             String i18n = TaskAdminConfig.getAdminConfig().getI18n();
 
-            i18n = StringUtils.isNotBlank(i18n)?("_"+i18n):i18n;
+            i18n = StringUtils.isNotBlank(i18n )? ("_"+i18n) : i18n;
             String i18nFile = MessageFormat.format("i18n/message{0}.properties", i18n);
 
             Resource resource = new ClassPathResource(i18nFile);
@@ -53,4 +55,26 @@ public class I18nUtil {
         return loadI18nProp().getProperty(key);
     }
 
+    /**
+     * 方便前端显示
+     * @param keys
+     * @return
+     */
+    public static String getMultString(String... keys) {
+        Map<String, String> map = new HashMap<String, String>();
+
+        Properties prop = loadI18nProp();
+        if (keys!=null && keys.length>0) {
+            for (String key: keys) {
+                map.put(key, prop.getProperty(key));
+            }
+        } else {
+            for (String key: prop.stringPropertyNames()) {
+                map.put(key, prop.getProperty(key));
+            }
+        }
+
+        String json = JsonUtil.writeValueAsString(map);
+        return json;
+    }
 }

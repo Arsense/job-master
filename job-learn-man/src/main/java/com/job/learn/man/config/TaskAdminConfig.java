@@ -4,6 +4,7 @@ import com.job.learn.man.dao.TaskGroupMapper;
 import com.job.learn.man.dao.TaskInfoMapper;
 import com.job.learn.man.dao.TaskLogMapper;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.Resource;
@@ -19,6 +20,7 @@ public class TaskAdminConfig implements InitializingBean {
     /**
      *  国际化读取配置
      */
+    @Value("${task.i18n}")
     private String i18n;
     //job相关配置信息
     @Resource
