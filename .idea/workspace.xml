@@ -7,11 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a6316b4-792f-425e-b5c8-b6397cc5b499" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/templates/jobcode/jobcode.index.ftl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/templates/joblog/joblog.detail.ftl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/templates/joblog/joblog.index.ftl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/job-learn-man/src/main/resources/templates/login.ftl" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/pom.xml" afterPath="$PROJECT_DIR$/job-learn-man/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/config/TaskAdminConfig.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/config/TaskAdminConfig.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/monitor/JobFailMonitorHelper.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/monitor/JobFailMonitorHelper.java" />
-      <change beforePath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/schedule/TaskDynmicScheduler.java" afterPath="$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/schedule/TaskDynmicScheduler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,17 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskDynmicScheduler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/schedule/TaskDynmicScheduler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobFailMonitorHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JobFailMonitorHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/java/com/job/learn/man/monitor/JobFailMonitorHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-671">
@@ -87,11 +77,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExecutorBlockStrategyEnum.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/route/ExecutorBlockStrategyEnum.java">
+      <file leaf-file-name="common.macro.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/common/common.macro.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="787">
+              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jobcode.index.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/jobcode/jobcode.index.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="joblog.index.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/joblog/joblog.index.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/login.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -102,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
               <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/domain/TaskInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -132,16 +142,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="27">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JobHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job-learn-core/src/main/java/com/learn/job/core/executor/anotation/JobHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -315,8 +315,8 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="193" />
-    <option name="y" value="29" />
+    <option name="x" value="149" />
+    <option name="y" value="10" />
     <option name="width" value="1844" />
     <option name="height" value="1068" />
   </component>
@@ -442,6 +442,55 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-master" type="462c0819:PsiDirectoryNode" />
+              <item name="job-learn-man" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-master" type="462c0819:PsiDirectoryNode" />
+              <item name="job-learn-man" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-master" type="462c0819:PsiDirectoryNode" />
+              <item name="job-learn-man" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="jobcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-master" type="462c0819:PsiDirectoryNode" />
+              <item name="job-learn-man" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="jobinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="job-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="job-master" type="462c0819:PsiDirectoryNode" />
+              <item name="job-learn-man" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="joblog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="job-master" type="b2602c69:ProjectViewProjectNode" />
@@ -882,7 +931,7 @@
       <workItem from="1550712400868" duration="21277000" />
       <workItem from="1550799211743" duration="13262000" />
       <workItem from="1550920521716" duration="5304000" />
-      <workItem from="1550974281389" duration="16536000" />
+      <workItem from="1550974281389" duration="16611000" />
     </task>
     <task id="LOCAL-00001" summary="测试用例添加">
       <created>1550740197575</created>
@@ -940,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1551021102441</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="报警邮件代码OK">
+      <created>1551023320508</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1551023320508</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -976,10 +1032,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125330000" />
+    <option name="totallyTimeSpent" value="125405000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="193" y="29" width="1844" height="1068" extended-state="0" />
+    <frame x="149" y="10" width="1844" height="1068" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1112,7 +1168,8 @@
     <MESSAGE value="数据库各表CRUD 方法OK 测试用例Ok" />
     <MESSAGE value="indeX 页面勉强OK 增加拦击器" />
     <MESSAGE value="注册监控与失败的任务监控处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="注册监控与失败的任务监控处理" />
+    <MESSAGE value="报警邮件代码OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="报警邮件代码OK" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1216,27 +1273,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/impl/jdbcjobstore/JobStoreSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="2245" column="0" lean-forward="false" selection-start-line="2245" selection-start-column="0" selection-end-line="2245" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/impl/jdbcjobstore/DBSemaphore.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/4.3.10.RELEASE/spring-context-support-4.3.10.RELEASE.jar!/org/springframework/scheduling/quartz/SchedulerFactoryBean.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.3.0/quartz-2.3.0.jar!/org/quartz/impl/jdbcjobstore/StdRowLockSemaphore.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -1416,14 +1452,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/common/common.macro.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1678,6 +1706,38 @@
             <element signature="e#1389#4662#0" expanded="true" />
             <element signature="e#4661#4662#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/common/common.macro.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="787">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/jobcode/jobcode.index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/joblog/joblog.index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job-learn-man/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
