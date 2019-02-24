@@ -8,6 +8,7 @@ import com.learn.job.core.executor.domain.TaskRegistry;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.mail.javamail.JavaMailSender;
 
 import javax.annotation.Resource;
 
@@ -24,6 +25,8 @@ public class TaskAdminConfig implements InitializingBean {
      */
     @Value("${task.i18n}")
     private String i18n;
+    //报警邮件的配置
+    private String emailUserName;
     //job相关配置信息
     @Resource
     private TaskInfoMapper taskInfoMapper;
@@ -35,6 +38,18 @@ public class TaskAdminConfig implements InitializingBean {
     private TaskLogMapper taskLogMapper;
     @Resource
     private TaskRegistryMapper taskRegistryMapper;
+
+    @Resource
+    private JavaMailSender mailSender;
+
+
+    public String getEmailUserName() {
+        return emailUserName;
+    }
+
+    public JavaMailSender getMailSender() {
+        return mailSender;
+    }
 
     private String accessToken;
 

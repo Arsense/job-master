@@ -138,7 +138,6 @@ public class TaskDynmicScheduler {
 // 1、job key
         TriggerKey triggerKey = TriggerKey.triggerKey(jobName, jobGroup);
         JobKey jobKey = new JobKey(jobName, jobGroup);
-
         // 2、valid
         if (scheduler.checkExists(triggerKey)) {
             return true;    // PASS
