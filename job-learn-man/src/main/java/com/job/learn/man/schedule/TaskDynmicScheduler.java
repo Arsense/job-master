@@ -1,6 +1,8 @@
 package com.job.learn.man.schedule;
 
 import com.job.learn.man.config.TaskAdminConfig;
+
+import com.job.learn.man.jobbean.RemoteHttpJobBean;
 import com.job.learn.man.monitor.JobFailMonitorHelper;
 import com.job.learn.man.monitor.JobRegistryMonitorHelper;
 import com.job.learn.man.util.I18nUtil;
@@ -11,11 +13,12 @@ import com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean;
 import com.xxl.rpc.remoting.invoker.route.LoadBalance;
 import com.xxl.rpc.remoting.net.NetEnum;
 import com.xxl.rpc.serialize.Serializer;
-import org.quartz.Scheduler;
+import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
+import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -38,17 +41,16 @@ public class TaskDynmicScheduler {
      * Bean加载前调用
      */
     private void start() {
-//        // valid 检验调度器是否为空
-//        Assert.notNull(scheduler, "quartz scheduler is null");
-//
-//        // init i18n
-////        initI18n();
-//
-//        // 运行注册监控
-//        JobRegistryMonitorHelper.getInstance().start();
-//
-//        // 运行情况监控
-//        JobFailMonitorHelper.getInstance().start();
+        // valid 检验调度器是否为空
+        Assert.notNull(scheduler, "quartz scheduler is null");
+        // init i18n
+        initI18n();
+
+        // 运行注册监控
+        JobRegistryMonitorHelper.getInstance().start();
+
+        // 运行情况监控
+        JobFailMonitorHelper.getInstance().start();
 //
 //        // 初始化RPCserver
 //        initRpcProvider();
@@ -109,7 +111,49 @@ public class TaskDynmicScheduler {
 
     }
 
+    /**
+     * 移除相应的JOB
+     * @param jobName
+     * @param jobGroup
+     */
+    public static void removeJob(String jobName, String jobGroup) throws SchedulerException {
+        TriggerKey triggerKey = TriggerKey.triggerKey(jobName, jobGroup);
 
+        if (scheduler.checkExists(triggerKey)) {
+            scheduler.unscheduleJob(triggerKey);    // trigger + job
+        }
 
+        logger.info(">>>>>>>>>>> removeJob success, triggerKey:{}", triggerKey);
+    }
 
+    /**
+     * 添加相应的JOB到任务队列中
+     * add trigger + job
+     * @param jobName
+     * @param jobGroup
+     * @param cronExpression
+     * @return
+     */
+    public static boolean addJob(String jobName, String jobGroup, String cronExpression) throws SchedulerException {
+// 1、job key
+        TriggerKey triggerKey = TriggerKey.triggerKey(jobName, jobGroup);
+        JobKey jobKey = new JobKey(jobName, jobGroup);
+
+        // 2、valid
+        if (scheduler.checkExists(triggerKey)) {
+            return true;    // PASS
+        }
+
+        // 3、corn trigger
+        CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule(cronExpression).withMisfireHandlingInstructionDoNothing();   // withMisfireHandlingInstructionDoNothing 忽略掉调度终止过程中忽略的调度
+        CronTrigger cronTrigger = TriggerBuilder.newTrigger().withIdentity(triggerKey).withSchedule(cronScheduleBuilder).build();
+        // 4、job detail
+        Class<? extends Job> jobClass_ = RemoteHttpJobBean.class;   // Class.forName(jobInfo.getJobClass());
+        JobDetail jobDetail = JobBuilder.newJob(jobClass_).withIdentity(jobKey).build();
+        Date date = scheduler.scheduleJob(jobDetail, cronTrigger);
+
+        logger.info(">>>>>>>>>>> addJob success, jobDetail:{}, cronTrigger:{}, date:{}", jobDetail, cronTrigger, date);
+        return true;
+
+    }
 }

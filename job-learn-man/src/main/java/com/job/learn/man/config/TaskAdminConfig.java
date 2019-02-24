@@ -3,6 +3,8 @@ package com.job.learn.man.config;
 import com.job.learn.man.dao.TaskGroupMapper;
 import com.job.learn.man.dao.TaskInfoMapper;
 import com.job.learn.man.dao.TaskLogMapper;
+import com.job.learn.man.dao.TaskRegistryMapper;
+import com.learn.job.core.executor.domain.TaskRegistry;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -31,6 +33,8 @@ public class TaskAdminConfig implements InitializingBean {
     //job日志相关
     @Resource
     private TaskLogMapper taskLogMapper;
+    @Resource
+    private TaskRegistryMapper taskRegistryMapper;
 
     private String accessToken;
 
@@ -60,6 +64,10 @@ public class TaskAdminConfig implements InitializingBean {
 
     public TaskLogMapper getTaskLogMapper() {
         return taskLogMapper;
+    }
+
+    public TaskRegistryMapper getTaskRegistryMapper() {
+        return taskRegistryMapper;
     }
 
     @Override

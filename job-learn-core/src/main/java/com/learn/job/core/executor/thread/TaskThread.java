@@ -108,7 +108,7 @@ public class TaskThread extends Thread {
                     if (result == null) {
                         result = AbstractJobHandler.FAIL;
                     }
-                    JobLogger.log("<br>----------- xxl-job job execute end(finish) -----------<br>----------- ReturnT:" + result);
+                    JobLogger.log("<br>----------- xxl-job job execute end(finish) -----------<br>----------- Result:" + result);
                     } else {
                         if (runTimes > 30) {
                             AbstractJobExecutor.removeJobThread(jobId, "excutor idel times over limit.");
