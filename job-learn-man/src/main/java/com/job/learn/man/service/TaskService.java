@@ -13,6 +13,21 @@ import java.util.Map;
  */
 public interface TaskService {
 
+
+    /**
+     * page list
+     *
+     * @param start
+     * @param length
+     * @param jobGroup
+     * @param jobDesc
+     * @param executorHandler
+     * @param filterTime
+     * @return
+     */
+    public Map<String, Object> pageList(int start, int length, int jobGroup, String jobDesc, String executorHandler, String filterTime);
+
+
     /**
      * dashboard info
      *

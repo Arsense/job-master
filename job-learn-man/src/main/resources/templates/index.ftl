@@ -5,11 +5,10 @@
 	<@netCommon.commonStyle />
     <!-- daterangepicker -->
     <link rel="stylesheet" href="${request.contextPath}/static/adminlte/bower_components/bootstrap-daterangepicker/daterangepicker.css">
-//   <title>${I18n.admin_name}</title>
+    <title>${I18n.admin_name}</title>
 </head>
 <body class="hold-transition skin-blue sidebar-mini <#if cookieMap?exists && cookieMap["xxljob_adminlte_settings"]?exists && "off" == cookieMap["xxljob_adminlte_settings"].value >sidebar-collapse</#if> ">
 <div class="wrapper">
-
     <!-- header -->
 	<@netCommon.commonHeader />
     <!-- left -->
@@ -19,7 +18,7 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>$1111</h1>
+            <h1>${I18n.job_dashboard_name}</h1>
             <!--
             <h1>运行报表<small>任务调度中心</small></h1>
             <ol class="breadcrumb">
@@ -41,13 +40,13 @@
                         <span class="info-box-icon"><i class="fa fa-flag-o"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">222</span>
+                            <span class="info-box-text">${I18n.job_dashboard_job_num}</span>
                             <span class="info-box-number">${jobInfoCount}</span>
 
                             <div class="progress">
                                 <div class="progress-bar" style="width: 100%"></div>
                             </div>
-                            <span class="progress-description">3333</span>
+                            <span class="progress-description">${I18n.job_dashboard_job_num_tip}</span>
                         </div>
                     </div>
                 </div>
@@ -58,14 +57,14 @@
                         <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">444</span>
+                            <span class="info-box-text">${I18n.job_dashboard_trigger_num}</span>
                             <span class="info-box-number">${jobLogCount}</span>
 
                             <div class="progress">
                                 <div class="progress-bar" style="width: 100%" ></div>
                             </div>
                             <span class="progress-description">
-                              5555
+                                ${I18n.job_dashboard_trigger_num_tip}
                                 <#--<#if jobLogCount gt 0>
                                     调度成功率：${(jobLogSuccessCount*100/jobLogCount)?string("0.00")}<small>%</small>
                                 </#if>-->
@@ -80,13 +79,13 @@
                         <span class="info-box-icon"><i class="fa ion-ios-settings-strong"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text">7${I18n.admin_name}</span>
-                            <span class="info-box-number">${I18n.admin_name}</span>
+                            <span class="info-box-text">${I18n.job_dashboard_jobgroup_num}</span>
+                            <#--<span class="info-box-number">${executorCount}</span>-->
 
                             <div class="progress">
                                 <div class="progress-bar" style="width: 100%"></div>
                             </div>
-                            <span class="progress-description">3232</span>
+                            <span class="progress-description">${I18n.job_dashboard_jobgroup_num_tip}</span>
                         </div>
                     </div>
                 </div>
@@ -98,7 +97,7 @@
                 <div class="col-md-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title">222</h3>
+                            <h3 class="box-title">${I18n.job_dashboard_report}</h3>
                         <#--<input type="text" class="form-control" id="filterTime" readonly >-->
 
                             <!-- tools box -->

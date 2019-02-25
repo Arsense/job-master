@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -39,6 +40,28 @@ public class TaskServiceImpl implements TaskService {
     @Resource
     private TaskGroupMapper taskGroupMapper;
 
+
+    @Override
+    public Map<String, Object> pageList(int start, int length, int jobGroup, String jobDesc, String executorHandler, String filterTime) {
+        // page list
+        List<TaskInfo> list = taskInfoMapper.pageList(start, length, jobGroup, jobDesc, executorHandler);
+        int list_count = taskInfoMapper.pageListCount(start, length, jobGroup, jobDesc, executorHandler);
+
+        // fill job info
+        if (list!=null && list.size()>0) {
+            for (TaskInfo jobInfo : list) {
+                //逐个触发了
+                TaskDynmicScheduler.fillJobInfo(jobInfo);
+            }
+        }
+
+        // package result
+        Map<String, Object> maps = new HashMap<String, Object>();
+        maps.put("recordsTotal", list_count);		// 总记录数
+        maps.put("recordsFiltered", list_count);	// 过滤后的总记录数
+        maps.put("data", list);  					// 分页列表
+        return maps;
+    }
 
     @Override
     public Map<String, Object> dashboardInfo() {

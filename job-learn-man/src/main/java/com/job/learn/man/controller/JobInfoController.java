@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author tangwei
@@ -48,6 +49,17 @@ public class JobInfoController {
 
         return "jobinfo/jobinfo.index";
     }
+
+    @RequestMapping("/pageList")
+    @ResponseBody
+    public Map<String, Object> pageList(@RequestParam(required = false, defaultValue = "0") int start,
+                                        @RequestParam(required = false, defaultValue = "10") int length,
+                                        int jobGroup, String jobDesc, String executorHandler, String filterTime) {
+
+        return taskService.pageList(start, length, jobGroup, jobDesc, executorHandler, filterTime);
+    }
+
+
 
     @RequestMapping("/add")
     @ResponseBody
@@ -91,4 +103,7 @@ public class JobInfoController {
         TaskTriggerPoolHelper.trigger(id, TriggerTypeEnum.MANUAL, -1, null, executorParam);
         return Result.SUCCESS;
     }
+
+
+
 }

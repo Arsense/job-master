@@ -7,6 +7,7 @@ import com.job.learn.man.monitor.JobFailMonitorHelper;
 import com.job.learn.man.monitor.JobRegistryMonitorHelper;
 import com.job.learn.man.util.I18nUtil;
 import com.learn.job.core.executor.business.BusinessExecutor;
+import com.learn.job.core.executor.domain.TaskInfo;
 import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
 import com.xxl.rpc.remoting.invoker.call.CallType;
 import com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean;
@@ -14,6 +15,7 @@ import com.xxl.rpc.remoting.invoker.route.LoadBalance;
 import com.xxl.rpc.remoting.net.NetEnum;
 import com.xxl.rpc.serialize.Serializer;
 import org.quartz.*;
+import org.quartz.impl.triggers.CronTriggerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
@@ -153,6 +155,38 @@ public class TaskDynmicScheduler {
 
         logger.info(">>>>>>>>>>> addJob success, jobDetail:{}, cronTrigger:{}, date:{}", jobDetail, cronTrigger, date);
         return true;
+
+    }
+
+    public static void fillJobInfo(TaskInfo jobInfo) {
+
+        String group = String.valueOf(jobInfo.getJobGroup());
+        String name = String.valueOf(jobInfo.getId());
+
+        // trigger key
+        TriggerKey triggerKey = TriggerKey.triggerKey(name, group);
+        try {
+
+            // trigger cron
+            Trigger trigger = scheduler.getTrigger(triggerKey);
+            if (trigger!=null && trigger instanceof CronTriggerImpl) {
+                String cronExpression = ((CronTriggerImpl) trigger).getCronExpression();
+                jobInfo.setJobCron(cronExpression);
+            }
+
+            // trigger state
+            Trigger.TriggerState triggerState = scheduler.getTriggerState(triggerKey);
+            if (triggerState!=null) {
+                jobInfo.setJobStatus(triggerState.name());
+            }
+
+            //JobKey jobKey = new JobKey(jobInfo.getJobName(), String.valueOf(jobInfo.getJobGroup()));
+            //JobDetail jobDetail = scheduler.getJobDetail(jobKey);
+            //String jobClass = jobDetail.getJobClass().getName();
+
+        } catch (SchedulerException e) {
+            logger.error(e.getMessage(), e);
+        }
 
     }
 }
