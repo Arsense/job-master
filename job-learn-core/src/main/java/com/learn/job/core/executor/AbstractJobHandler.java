@@ -8,7 +8,6 @@ import com.learn.job.core.executor.domain.Result;
  */
 public abstract class AbstractJobHandler {
 
-
     /** success */
     public static final Result<String> SUCCESS = new Result<String>(200, null);
     /** fail */
@@ -17,7 +16,6 @@ public abstract class AbstractJobHandler {
     public static final Result<String> FAIL_TIMEOUT = new Result<String>(502, null);
 
     public abstract Result<String> execute(String param) throws Exception;
-
 
     /**
      * 留接口作为继承扩展

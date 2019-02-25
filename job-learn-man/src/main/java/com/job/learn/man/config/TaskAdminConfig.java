@@ -4,6 +4,7 @@ import com.job.learn.man.dao.TaskGroupMapper;
 import com.job.learn.man.dao.TaskInfoMapper;
 import com.job.learn.man.dao.TaskLogMapper;
 import com.job.learn.man.dao.TaskRegistryMapper;
+import com.learn.job.core.executor.business.AdminBusiness;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,10 @@ public class TaskAdminConfig implements InitializingBean {
     private String i18n;
     //报警邮件的配置
     private String emailUserName;
+
+    @Resource
+    private AdminBusiness adminBusiness;
+
     //job相关配置信息
     @Resource
     private TaskInfoMapper taskInfoMapper;
@@ -86,5 +91,9 @@ public class TaskAdminConfig implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         adminConfig = this;
+    }
+
+    public AdminBusiness getAdminBusiness() {
+        return adminBusiness;
     }
 }

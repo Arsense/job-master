@@ -80,7 +80,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">${I18n.job_dashboard_jobgroup_num}</span>
-                            <#--<span class="info-box-number">${executorCount}</span>-->
+                            <span class="info-box-number">${executorCount}</span>
 
                             <div class="progress">
                                 <div class="progress-bar" style="width: 100%"></div>

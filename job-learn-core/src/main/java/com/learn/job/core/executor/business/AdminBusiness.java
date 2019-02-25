@@ -12,7 +12,6 @@ import java.util.List;
 public interface AdminBusiness {
 
     public static final String MAPPING = "/api";
-
     /**
      * callback
      *

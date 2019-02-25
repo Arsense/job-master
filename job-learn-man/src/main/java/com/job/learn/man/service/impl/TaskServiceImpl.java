@@ -68,12 +68,26 @@ public class TaskServiceImpl implements TaskService {
         int jobInfoCount = taskInfoMapper.findAllCount();
         int jobLogCount = taskLogMapper.triggerCountByHandleCode(-1);
         int jobLogSuccessCount = taskLogMapper.triggerCountByHandleCode(Result.SUCCESS_CODE);
+        //执行器数量 可以知道自己的执行器起来了木有
+        Set<String> executerAddressSet = new HashSet<String>();
+        List<TaskGroup> groupList = taskGroupMapper.findAll();
+
+        if (groupList!=null && !groupList.isEmpty()) {
+            for (TaskGroup group: groupList) {
+                if (group.getRegistryList()!=null && !group.getRegistryList().isEmpty()) {
+                    executerAddressSet.addAll(group.getRegistryList());
+                }
+            }
+        }
+
+        int executorCount = executerAddressSet.size();
 
         Map<String, Object> dashboardMap = new HashMap<String, Object>();
         dashboardMap.put("jobInfoCount", jobInfoCount);
         dashboardMap.put("jobLogCount", jobLogCount);
         dashboardMap.put("jobLogSuccessCount", jobLogSuccessCount);
-//        dashboardMap.put("executorCount", executorCount);
+
+        dashboardMap.put("executorCount", executorCount);
         return dashboardMap;
 
 

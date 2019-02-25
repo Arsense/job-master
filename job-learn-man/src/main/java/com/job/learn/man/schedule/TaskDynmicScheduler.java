@@ -6,6 +6,7 @@ import com.job.learn.man.jobbean.RemoteHttpJobBean;
 import com.job.learn.man.monitor.JobFailMonitorHelper;
 import com.job.learn.man.monitor.JobRegistryMonitorHelper;
 import com.job.learn.man.util.I18nUtil;
+import com.learn.job.core.executor.business.AdminBusiness;
 import com.learn.job.core.executor.business.BusinessExecutor;
 import com.learn.job.core.executor.domain.TaskInfo;
 import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
@@ -13,6 +14,8 @@ import com.xxl.rpc.remoting.invoker.call.CallType;
 import com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean;
 import com.xxl.rpc.remoting.invoker.route.LoadBalance;
 import com.xxl.rpc.remoting.net.NetEnum;
+import com.xxl.rpc.remoting.net.impl.jetty.server.JettyServerHandler;
+import com.xxl.rpc.remoting.provider.XxlRpcProviderFactory;
 import com.xxl.rpc.serialize.Serializer;
 import org.quartz.*;
 import org.quartz.impl.triggers.CronTriggerImpl;
@@ -32,7 +35,7 @@ public class TaskDynmicScheduler {
     private static final Logger logger = LoggerFactory.getLogger(TaskDynmicScheduler.class);
     //存储基本的调度执行器
     private static ConcurrentHashMap<String, BusinessExecutor> businessExecutorMap = new ConcurrentHashMap<String, BusinessExecutor>();
-
+    private static JettyServerHandler jettyServerHandler;
     // scheduler
     private static Scheduler scheduler;
     public void setScheduler(Scheduler scheduler) {
@@ -54,8 +57,8 @@ public class TaskDynmicScheduler {
         // 运行情况监控
         JobFailMonitorHelper.getInstance().start();
 //
-//        // 初始化RPCserver
-//        initRpcProvider();
+        // 初始化RPCserver
+        initRpcProvider();
 
         logger.info(">>>>>>>>> init job 调度器管理读 启动成功admin success.");
 
@@ -66,6 +69,23 @@ public class TaskDynmicScheduler {
      * 初始化RPC服务端
      */
     private void initRpcProvider() {
+        // 创建服务提供者  给core端用AdminBusinesService 是因为那个让其能操作数据库
+        XxlRpcProviderFactory xxlRpcProviderFactory = new XxlRpcProviderFactory();
+        xxlRpcProviderFactory.initConfig(
+                NetEnum.JETTY,
+                Serializer.SerializeEnum.HESSIAN.getSerializer(),
+                null,
+                0,
+                TaskAdminConfig.getAdminConfig().getAccessToken(),
+                null,
+                null);
+
+        // add services  1参名字 二参具体的接口
+        xxlRpcProviderFactory.addService(AdminBusiness.class.getName(), null, TaskAdminConfig.getAdminConfig().getAdminBusiness());
+
+        // jetty handler
+        jettyServerHandler = new JettyServerHandler(xxlRpcProviderFactory);
+
     }
 
 

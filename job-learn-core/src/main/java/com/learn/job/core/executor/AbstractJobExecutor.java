@@ -1,20 +1,25 @@
 package com.learn.job.core.executor;
 
+import com.learn.job.core.executor.business.BusinessExecutor;
+import com.learn.job.core.executor.business.BusinessExecutorImpl;
 import com.learn.job.core.executor.thread.JoblogFileCleanThread;
 import com.learn.job.core.executor.thread.TaskThread;
 import com.learn.job.core.executor.thread.TriggerCallbackThread;
 import com.learn.job.core.executor.business.AdminBusiness;
 import com.learn.job.core.executor.log.JobFileAppender;
+import com.xxl.rpc.registry.ServiceRegistry;
 import com.xxl.rpc.remoting.invoker.call.CallType;
 import com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean;
 import com.xxl.rpc.remoting.invoker.route.LoadBalance;
 import com.xxl.rpc.remoting.net.NetEnum;
+import com.xxl.rpc.remoting.provider.XxlRpcProviderFactory;
 import com.xxl.rpc.serialize.Serializer;
+import com.xxl.rpc.util.IpUtil;
+import com.xxl.rpc.util.NetUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -31,7 +36,10 @@ public class AbstractJobExecutor {
     private String accessToken;
     private int logRetentionDays;
     private static List<AdminBusiness> adminBusinessList;
-
+    private String appName;
+    private String ip;
+    private int port;
+    private XxlRpcProviderFactory xxlRpcProviderFactory = null;
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractJobExecutor.class);
     //JobHandler存储仓库
@@ -44,7 +52,7 @@ public class AbstractJobExecutor {
      * 初始化函数 spring的Bean加载前就会执行
      * @throws Exception
      */
-    public void start()  {
+    public void start() throws Exception {
         // 初始化触发器的日志文件目录
         JobFileAppender.initLogPath(logPath);
         // init admin-client
@@ -53,8 +61,67 @@ public class AbstractJobExecutor {
         JoblogFileCleanThread.getInstance().start(logRetentionDays);
         // 初始化线程回调
         TriggerCallbackThread.getInstance().start();
+        // init executor-server
+        port = port>0?port: NetUtil.findAvailablePort(9999);
+        ip = (ip!=null&&ip.trim().length()>0)?ip: IpUtil.getIp();
+        initRpcProvider(ip, port, appName, accessToken);
     }
 
+    /**
+     * 这里RPC获取到admin端的service 好执行更新数据库的操作
+     * @param ip
+     * @param port
+     * @param appName
+     * @param accessToken
+     * @throws Exception
+     */
+    private void initRpcProvider(String ip, int port, String appName, String accessToken) throws Exception {
+        // init, provider factory
+        String address = IpUtil.getIpPort(ip, port);
+        Map<String, String> serviceRegistryParam = new HashMap<String, String>();
+        serviceRegistryParam.put("appName", appName);
+        serviceRegistryParam.put("address", address);
+        xxlRpcProviderFactory = new XxlRpcProviderFactory();
+        xxlRpcProviderFactory.initConfig(NetEnum.JETTY, Serializer.SerializeEnum.HESSIAN.getSerializer(), ip, port, accessToken, ExecutorServiceRegistry.class, serviceRegistryParam);
+        // add services 执行器
+        xxlRpcProviderFactory.addService(BusinessExecutor.class.getName(), null, new BusinessExecutorImpl());
+        // start
+        xxlRpcProviderFactory.start();
+
+    }
+
+    public static class ExecutorServiceRegistry extends ServiceRegistry {
+
+        @Override
+        public void start(Map<String, String> map) {
+
+        }
+
+        @Override
+        public void stop() {
+
+        }
+
+        @Override
+        public boolean registry(Set<String> set, String s) {
+            return false;
+        }
+
+        @Override
+        public boolean remove(Set<String> set, String s) {
+            return false;
+        }
+
+        @Override
+        public Map<String, TreeSet<String>> discovery(Set<String> set) {
+            return null;
+        }
+
+        @Override
+        public TreeSet<String> discovery(String s) {
+            return null;
+        }
+    }
     /**添加jobHandler
      *
      * @param name
@@ -80,9 +147,9 @@ public class AbstractJobExecutor {
         }
         //也是玩的代理呀
         for (String address: adminAddresses.trim().split(",")) {
-            if (address!=null && address.trim().length()>0) {
+            if (address != null && address.trim().length()>0) {
                 String addressUrl = address.concat(AdminBusiness.MAPPING);
-                //妈呀这个RPC干了啥啊
+                //妈呀这个RPC干了啥啊  服务消费者
                 AdminBusiness business = (AdminBusiness) new XxlRpcReferenceBean(
                         NetEnum.JETTY,
                         Serializer.SerializeEnum.HESSIAN.getSerializer(),
@@ -124,6 +191,33 @@ public class AbstractJobExecutor {
     }
 
 
+    public String getAppName() {
+        return appName;
+    }
+
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+    public static void setJobThreadRepository(ConcurrentHashMap<Integer, TaskThread> jobThreadRepository) {
+        AbstractJobExecutor.jobThreadRepository = jobThreadRepository;
+    }
 
     public String getAdminAddresses() {
         return adminAddresses;
