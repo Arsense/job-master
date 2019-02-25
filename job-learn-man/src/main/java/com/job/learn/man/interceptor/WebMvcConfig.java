@@ -11,7 +11,6 @@ import javax.annotation.Resource;
  * @date 2019/2/23 23:08
  */
 @Configuration
-
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 //    @Resource

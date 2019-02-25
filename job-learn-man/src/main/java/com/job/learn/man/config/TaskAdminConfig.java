@@ -4,7 +4,6 @@ import com.job.learn.man.dao.TaskGroupMapper;
 import com.job.learn.man.dao.TaskInfoMapper;
 import com.job.learn.man.dao.TaskLogMapper;
 import com.job.learn.man.dao.TaskRegistryMapper;
-import com.learn.job.core.executor.domain.TaskRegistry;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -38,8 +37,7 @@ public class TaskAdminConfig implements InitializingBean {
     private TaskLogMapper taskLogMapper;
     @Resource
     private TaskRegistryMapper taskRegistryMapper;
-
-    @Resource
+//    @Resource
     private JavaMailSender mailSender;
 
 

@@ -3,6 +3,7 @@ package com.job.learn.man.service;
 
 import com.learn.job.core.executor.domain.Result;
 import com.learn.job.core.executor.domain.TaskInfo;
+import org.quartz.SchedulerException;
 
 import java.util.Map;
 
@@ -42,7 +43,7 @@ public interface TaskService {
      * @param id
      * @return
      */
-    public Result<String> remove(int id);
+    public Result<String> remove(int id) throws SchedulerException;
 
     /**
      * 执行JOB 绑定quartz

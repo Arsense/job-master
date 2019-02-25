@@ -93,7 +93,7 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Result<String> remove(int id) {
+    public Result<String> remove(int id) throws SchedulerException {
         TaskInfo taskInfo = taskInfoMapper.loadById(id);
         String group = String.valueOf(taskInfo.getJobGroup());
         String name = String.valueOf(taskInfo.getId());
