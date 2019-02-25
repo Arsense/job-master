@@ -28,11 +28,23 @@ public class IndexController {
         return "index";
     }
 
-//    @RequestMapping("/chartInfo")
-//    @ResponseBody
-//    public Result<Map<String, Object>> chartInfo(Date startDate, Date endDate) {
-//        Result<Map<String, Object>> chartInfo = taskService.chartInfo(startDate, endDate);
-//        return chartInfo;
-//    }
+    @RequestMapping("/chartInfo")
+    @ResponseBody
+    public Result<Map<String, Object>> chartInfo(Date startDate, Date endDate) {
+        Result<Map<String, Object>> chartInfo = taskService.chartInfo(startDate, endDate);
+        return chartInfo;
+    }
+
+
+
+    @RequestMapping("/help")
+    public String help() {
+
+		/*if (!PermissionInterceptor.ifLogin(request)) {
+			return "redirect:/toLogin";
+		}*/
+
+        return "help";
+    }
 
 }

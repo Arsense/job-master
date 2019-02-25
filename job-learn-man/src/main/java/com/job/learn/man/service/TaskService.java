@@ -5,6 +5,7 @@ import com.learn.job.core.executor.domain.Result;
 import com.learn.job.core.executor.domain.TaskInfo;
 import org.quartz.SchedulerException;
 
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -77,4 +78,12 @@ public interface TaskService {
     public Result<String> stop(int id);
 
 
+    /**
+     * 表格信息显示
+     *
+     * @param startDate
+     * @param endDate
+     * @return
+     */
+    public Result<Map<String,Object>> chartInfo(Date startDate, Date endDate);
 }

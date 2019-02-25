@@ -14,6 +14,8 @@ import com.learn.job.core.executor.domain.TaskLog;
 import com.learn.job.core.executor.enums.GlueTypeEnum;
 import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
+import org.apache.commons.lang3.time.FastDateFormat;
 import org.quartz.CronExpression;
 import org.quartz.SchedulerException;
 import org.slf4j.Logger;
@@ -21,9 +23,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author tangwei
@@ -150,5 +150,58 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public Result<String> stop(int id) {
         return null;
+    }
+
+    @Override
+    public Result<Map<String, Object>> chartInfo(Date startDate, Date endDate) {
+        List<String> triggerDayList = new ArrayList<String>();
+        List<Integer> triggerDayCountRunningList = new ArrayList<Integer>();
+        List<Integer> triggerDayCountSucList = new ArrayList<Integer>();
+        List<Integer> triggerDayCountFailList = new ArrayList<Integer>();
+        int triggerCountRunningTotal = 0;
+        int triggerCountSucTotal = 0;
+        int triggerCountFailTotal = 0;
+
+        List<Map<String, Object>> triggerCountMapAll = taskLogMapper.triggerCountByDay(startDate, endDate);
+        if (triggerCountMapAll!=null && triggerCountMapAll.size()>0) {
+            for (Map<String, Object> item: triggerCountMapAll) {
+                String day = String.valueOf(item.get("triggerDay"));
+                int triggerDayCount = Integer.valueOf(String.valueOf(item.get("triggerDayCount")));
+                int triggerDayCountRunning = Integer.valueOf(String.valueOf(item.get("triggerDayCountRunning")));
+                int triggerDayCountSuc = Integer.valueOf(String.valueOf(item.get("triggerDayCountSuc")));
+                int triggerDayCountFail = triggerDayCount - triggerDayCountRunning - triggerDayCountSuc;
+
+                triggerDayList.add(day);
+                triggerDayCountRunningList.add(triggerDayCountRunning);
+                triggerDayCountSucList.add(triggerDayCountSuc);
+                triggerDayCountFailList.add(triggerDayCountFail);
+
+                triggerCountRunningTotal += triggerDayCountRunning;
+                triggerCountSucTotal += triggerDayCountSuc;
+                triggerCountFailTotal += triggerDayCountFail;
+            }
+        } else {
+            for (int i = 4; i > -1; i--) {
+                triggerDayList.add(FastDateFormat.getInstance("yyyy-MM-dd").format(DateUtils.addDays(new Date(), -i)));
+                triggerDayCountRunningList.add(0);
+                triggerDayCountSucList.add(0);
+                triggerDayCountFailList.add(0);
+            }
+        }
+
+        Map<String, Object> result = new HashMap<String, Object>();
+        result.put("triggerDayList", triggerDayList);
+        result.put("triggerDayCountRunningList", triggerDayCountRunningList);
+        result.put("triggerDayCountSucList", triggerDayCountSucList);
+        result.put("triggerDayCountFailList", triggerDayCountFailList);
+
+        result.put("triggerCountRunningTotal", triggerCountRunningTotal);
+        result.put("triggerCountSucTotal", triggerCountSucTotal);
+        result.put("triggerCountFailTotal", triggerCountFailTotal);
+
+		/*// set cache
+		LocalCacheUtil.set(cacheKey, result, 60*1000);     // cache 60s*/
+
+        return new Result<Map<String, Object>>(result);
     }
 }
