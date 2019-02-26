@@ -148,7 +148,7 @@ public class AbstractJobExecutor {
         if (adminAddresses == null || adminAddresses.trim().length() <= 0) {
             return;
         }
-        //也是玩的代理呀
+        //也是玩的代理呀   我天 通过URLController消费的？
         for (String address: adminAddresses.trim().split(",")) {
             if (address != null && address.trim().length()>0) {
                 String addressUrl = address.concat(AdminBusiness.MAPPING);

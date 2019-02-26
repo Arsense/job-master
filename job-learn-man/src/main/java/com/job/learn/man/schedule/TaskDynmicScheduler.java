@@ -17,12 +17,17 @@ import com.xxl.rpc.remoting.net.NetEnum;
 import com.xxl.rpc.remoting.net.impl.jetty.server.JettyServerHandler;
 import com.xxl.rpc.remoting.provider.XxlRpcProviderFactory;
 import com.xxl.rpc.serialize.Serializer;
+import org.eclipse.jetty.server.Request;
 import org.quartz.*;
 import org.quartz.impl.triggers.CronTriggerImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -86,6 +91,10 @@ public class TaskDynmicScheduler {
         // jetty handler
         jettyServerHandler = new JettyServerHandler(xxlRpcProviderFactory);
 
+    }
+
+    public static void invokeAdminService(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        jettyServerHandler.handle(null, new Request(null, null), request, response);
     }
 
 
