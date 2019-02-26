@@ -2,6 +2,7 @@ package com.learn.job.core.executor;
 
 import com.learn.job.core.executor.business.BusinessExecutor;
 import com.learn.job.core.executor.business.BusinessExecutorImpl;
+import com.learn.job.core.executor.thread.ExecutorRegistryThread;
 import com.learn.job.core.executor.thread.JoblogFileCleanThread;
 import com.learn.job.core.executor.thread.TaskThread;
 import com.learn.job.core.executor.thread.TriggerCallbackThread;
@@ -62,8 +63,8 @@ public class AbstractJobExecutor {
         // 初始化线程回调
         TriggerCallbackThread.getInstance().start();
         // init executor-server
-        port = port>0?port: NetUtil.findAvailablePort(9999);
-        ip = (ip!=null&&ip.trim().length()>0)?ip: IpUtil.getIp();
+        port = port > 0 ? port : NetUtil.findAvailablePort(9999);
+        ip = (ip != null&&ip.trim().length()>0)?ip: IpUtil.getIp();
         initRpcProvider(ip, port, appName, accessToken);
     }
 
@@ -93,13 +94,15 @@ public class AbstractJobExecutor {
     public static class ExecutorServiceRegistry extends ServiceRegistry {
 
         @Override
-        public void start(Map<String, String> map) {
-
+        public void start(Map<String, String> param) {
+            // start registry
+            ExecutorRegistryThread.getInstance().start(param.get("appName"), param.get("address"));
         }
 
         @Override
         public void stop() {
-
+            // stop registry
+            ExecutorRegistryThread.getInstance().toStop();
         }
 
         @Override

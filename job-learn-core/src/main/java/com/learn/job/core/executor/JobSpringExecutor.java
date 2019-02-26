@@ -17,7 +17,7 @@ public class JobSpringExecutor extends AbstractJobExecutor implements Applicatio
 
     private ApplicationContext applicationContext;
 
-    public void start(){
+    public void start() throws Exception {
         //初始化jobHandler 库
         initJobHandlerRepository(applicationContext);
 

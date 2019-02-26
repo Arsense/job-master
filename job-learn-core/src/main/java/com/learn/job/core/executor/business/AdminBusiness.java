@@ -1,6 +1,7 @@
 package com.learn.job.core.executor.business;
 
 import com.learn.job.core.executor.domain.HandleCallbackParam;
+import com.learn.job.core.executor.domain.RegistryParam;
 import com.learn.job.core.executor.domain.Result;
 
 import java.util.List;
@@ -19,4 +20,21 @@ public interface AdminBusiness {
      * @return
      */
     public Result<String> callback(List<HandleCallbackParam> callbackParamList);
+
+
+    /**
+     * 注册 相关的服务
+     *
+     * @param registryParam
+     * @return
+     */
+    public Result<String> registry(RegistryParam registryParam);
+
+    /**
+     * 移除相关的注册服务
+     *
+     * @param registryParam
+     * @return
+     */
+    public Result<String> registryRemove(RegistryParam registryParam);
 }
