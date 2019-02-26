@@ -146,11 +146,11 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Result<String> start(int id) {
-        TaskInfo xxlJobInfo = taskInfoMapper.loadById(id);
+        TaskInfo taskInfo = taskInfoMapper.loadById(id);
 
-        String group = String.valueOf(xxlJobInfo.getJobGroup());
-        String name = String.valueOf(xxlJobInfo.getId());
-        String cronExpression = xxlJobInfo.getJobCron();
+        String group = String.valueOf(taskInfo.getJobGroup());
+        String name = String.valueOf(taskInfo.getId());
+        String cronExpression = taskInfo.getJobCron();
 
         try {
             boolean result = TaskDynmicScheduler.addJob(name, group, cronExpression);
@@ -163,7 +163,18 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Result<String> stop(int id) {
-        return null;
+        TaskInfo taskInfo = taskInfoMapper.loadById(id);
+
+        String group = String.valueOf(taskInfo.getJobGroup());
+        String name = String.valueOf(taskInfo.getId());
+
+        try {
+            boolean result = TaskDynmicScheduler.removeJob(name, group);
+            return result?Result.SUCCESS:Result.FAIL;
+        } catch (SchedulerException e) {
+            logger.error(e.getMessage(), e);
+            return Result.FAIL;
+        }
     }
 
     @Override

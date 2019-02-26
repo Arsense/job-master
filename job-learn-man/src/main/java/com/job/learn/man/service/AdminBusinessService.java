@@ -2,13 +2,11 @@ package com.job.learn.man.service;
 
 import com.job.learn.man.dao.TaskInfoMapper;
 import com.job.learn.man.dao.TaskLogMapper;
+import com.job.learn.man.dao.TaskRegistryMapper;
 import com.job.learn.man.trigger.TriggerTypeEnum;
 import com.learn.job.core.executor.AbstractJobHandler;
 import com.learn.job.core.executor.business.AdminBusiness;
-import com.learn.job.core.executor.domain.HandleCallbackParam;
-import com.learn.job.core.executor.domain.Result;
-import com.learn.job.core.executor.domain.TaskInfo;
-import com.learn.job.core.executor.domain.TaskLog;
+import com.learn.job.core.executor.domain.*;
 import com.job.learn.man.thread.TaskTriggerPoolHelper;
 import com.job.learn.man.util.I18nUtil;
 import org.slf4j.Logger;
@@ -32,6 +30,8 @@ public class AdminBusinessService implements AdminBusiness {
     private TaskLogMapper taskLogMapper;
     @Resource
     private TaskInfoMapper taskInfoMapper;
+    @Resource
+    private TaskRegistryMapper taskRegistryMapper;
 
 
     public Result<String> callback(List<HandleCallbackParam> callbackParamList) {
@@ -42,6 +42,21 @@ public class AdminBusinessService implements AdminBusiness {
                     (callbackResult.getCode()== AbstractJobHandler.SUCCESS.getCode()?"success":"fail"), handleCallbackParam, callbackResult);
         }
             return null;
+    }
+
+    @Override
+    public Result<String> registry(RegistryParam registryParam) {
+        int result = taskRegistryMapper.registryUpdate(registryParam.getRegistGroup(), registryParam.getRegistryKey(), registryParam.getRegistryValue());
+        if (result < 1) {
+            taskRegistryMapper.registrySave(registryParam.getRegistGroup(), registryParam.getRegistryKey(), registryParam.getRegistryValue());
+        }
+        return Result.SUCCESS;
+    }
+
+    @Override
+    public Result<String> registryRemove(RegistryParam registryParam) {
+        taskRegistryMapper.registryDelete(registryParam.getRegistGroup(), registryParam.getRegistryKey(), registryParam.getRegistryValue());
+        return Result.SUCCESS;
     }
 
     /**

@@ -138,7 +138,7 @@ public class TaskDynmicScheduler {
      * @param jobName
      * @param jobGroup
      */
-    public static void removeJob(String jobName, String jobGroup) throws SchedulerException {
+    public static boolean removeJob(String jobName, String jobGroup) throws SchedulerException {
         TriggerKey triggerKey = TriggerKey.triggerKey(jobName, jobGroup);
 
         if (scheduler.checkExists(triggerKey)) {
@@ -146,6 +146,8 @@ public class TaskDynmicScheduler {
         }
 
         logger.info(">>>>>>>>>>> removeJob success, triggerKey:{}", triggerKey);
+        return true;
+
     }
 
     /**

@@ -11,6 +11,8 @@
 
     <artifactId>job-learn-exector</artifactId>
     <packaging>pom</packaging>
-
+    <modules>
+        <module>job-exector-spring1</module>
+    </modules>
 
 </project>
