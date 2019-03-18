@@ -3,9 +3,10 @@ package com.job.learn.man.controller;
 import com.job.learn.man.dao.TaskGroupMapper;
 import com.job.learn.man.dao.TaskInfoMapper;
 import com.job.learn.man.dao.TaskLogMapper;
-import com.learn.job.core.executor.domain.TaskGroup;
-import com.learn.job.core.executor.domain.TaskInfo;
-import com.learn.job.core.executor.domain.TaskLog;
+import com.job.learn.man.schedule.TaskDynmicScheduler;
+import com.job.learn.man.util.I18nUtil;
+import com.learn.job.core.executor.business.BusinessExecutor;
+import com.learn.job.core.executor.domain.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 import org.slf4j.Logger;
@@ -44,7 +45,6 @@ public class JobLogController {
         // 执行器列表
         List<TaskGroup> jobGroupList =  taskGroupMapper.findAll();
         model.addAttribute("JobGroupList", jobGroupList);
-
         // 任务
         if (jobId > 0) {
             TaskInfo jobInfo = taskInfoMapper.loadById(jobId);
@@ -83,4 +83,49 @@ public class JobLogController {
         maps.put("data", list);  					// 分页列表
         return maps;
     }
+
+
+    @RequestMapping("/getJobsByGroup")
+    @ResponseBody
+    public Result<List<TaskInfo>> getJobsByGroup(int jobGroup){
+        List<TaskInfo> list = taskInfoMapper.findByJobsGroup(jobGroup);
+        return new Result<List<TaskInfo>>(list);
+    }
+
+    @RequestMapping("/logDetailPage")
+    public String logDetailPage(int id, Model model){
+        // base check
+        Result<String> logStatue = Result.SUCCESS;
+        TaskLog jobLog = taskLogMapper.loadById(id);
+        if (jobLog == null) {
+            throw new RuntimeException(I18nUtil.getString("joblog_logid_unvalid"));
+        }
+
+        model.addAttribute("triggerCode", jobLog.getTriggerCode());
+        model.addAttribute("handleCode", jobLog.getHandleCode());
+        model.addAttribute("executorAddress", jobLog.getExecutorAddress());
+        model.addAttribute("triggerTime", jobLog.getTriggerTime().getTime());
+        model.addAttribute("logId", jobLog.getId());
+        return "joblog/joblog.detail";
+    }
+
+
+    @RequestMapping("/logDetailCat")
+    @ResponseBody
+    public Result<LogResult> logDetailCat(String executorAddress, long triggerTime, int logId, int fromLineNum){
+
+        BusinessExecutor executorBiz = null;
+        try {
+            executorBiz = TaskDynmicScheduler.getBusinessExecutor(executorAddress);
+            Result<LogResult> logResult = executorBiz.log(triggerTime, logId, fromLineNum);
+            return logResult;
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error(e.getMessage(), e);
+            return new Result<LogResult>(Result.FAIL_CODE, e.getMessage());
+        }
+
+    }
+
+
 }

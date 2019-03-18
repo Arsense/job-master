@@ -2,14 +2,18 @@ package com.learn.job.core.executor.business;
 
 import com.learn.job.core.executor.AbstractJobExecutor;
 import com.learn.job.core.executor.AbstractJobHandler;
+import com.learn.job.core.executor.domain.LogResult;
 import com.learn.job.core.executor.domain.Result;
 import com.learn.job.core.executor.domain.TriggerParam;
 import com.learn.job.core.executor.enums.GlueTypeEnum;
 import com.learn.job.core.executor.glue.GlueFactory;
 import com.learn.job.core.executor.handler.GlueJobHandler;
+import com.learn.job.core.executor.log.JobFileAppender;
 import com.learn.job.core.executor.thread.TaskThread;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Date;
 
 /**
  * @author tangwei
@@ -18,7 +22,6 @@ import org.slf4j.LoggerFactory;
 public class BusinessExecutorImpl implements BusinessExecutor {
 
     private static Logger logger = LoggerFactory.getLogger(BusinessExecutorImpl.class);
-
 
     /**
      * 执行任务的线程去执行相应的任务 JobThread->去运行JobHandler
@@ -53,19 +56,25 @@ public class BusinessExecutorImpl implements BusinessExecutor {
                         return new Result<String>(Result.FAIL_CODE, e.getMessage());
                     }
                 }
-
             } else {
                 return new Result<String>(Result.FAIL_CODE, "glueType[" + triggerParam.getGlueType() + "] is not valid.");
             }
-
             if (jobThread == null) {
                 jobThread = AbstractJobExecutor.registJobThread(triggerParam.getJobId(), jobHandler, removeOldReason);
             }
-
             // push data to queue
             Result<String> pushResult = jobThread.pushTriggerQueue(triggerParam);
             return pushResult;
         }
         return Result.SUCCESS;
+    }
+
+    @Override
+    public Result<LogResult> log(long logDateTime, int logId, int fromLineNume) {
+        //读取时创建 然后读取
+        String logFileName = JobFileAppender.makeLogFileName(new Date(logDateTime), logId);
+
+        LogResult logResult = JobFileAppender.readLog(logFileName, fromLineNume);
+        return new Result<LogResult>(logResult);
     }
 }

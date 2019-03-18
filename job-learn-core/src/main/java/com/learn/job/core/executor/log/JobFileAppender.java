@@ -1,11 +1,10 @@
 package com.learn.job.core.executor.log;
 
+import com.learn.job.core.executor.domain.LogResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -110,7 +109,50 @@ public class JobFileAppender {
 
     }
 
+    /**
+     * 支持读取日志文件
+     *
+     * @param logFileName
+     * @return log content
+     */
+    public static LogResult readLog(String logFileName, int fromLineNumber) {
+        if(logFileName == null || logFileName.trim().length() == 0) {
+            return new LogResult(fromLineNumber, 0, "readLog fail, logFile not found", true);
+        }
 
+        File logFile = new File(logFileName);
+        if (!logFile.exists()) {
+            return new LogResult(fromLineNumber, 0, "readLog fail, logFile not exists", true);
+        }
+        StringBuffer logContentBuffer = new StringBuffer();
+        int toLineNumber = 0;
+        LineNumberReader reader = null;
+        try {
+            reader = new LineNumberReader(new InputStreamReader(new FileInputStream(logFile)));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                toLineNumber = reader.getLineNumber();		// [from, to], start as 1
+                if (toLineNumber >= fromLineNumber) {
+                    logContentBuffer.append(line).append("\n");
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            logger.error(e.getMessage(), e);
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    logger.error(e.getMessage(), e);
+                }
+            }
+        }
+        // result
+        LogResult logResult = new LogResult(fromLineNumber, toLineNumber, logContentBuffer.toString(), false);
+        return logResult;
+    }
 
     public static Logger getLogger() {
         return logger;
