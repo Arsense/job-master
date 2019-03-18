@@ -43,6 +43,9 @@ public class ExecutorRegistryThread {
                         RegistryParam registryParam = new RegistryParam(RegistryConfig.RegistType.EXECUTOR.name(), appName, address);
                         for (AdminBusiness adminBusiness: AbstractJobExecutor.getAdminBusinessList()) {
                             try {
+                                if (registryParam != null) {
+                                    logger.info("=======这里是" + registryParam);
+                                }
                                 Result<String> registryResult = adminBusiness.registry(registryParam);
                                 if (registryResult != null && Result.SUCCESS_CODE == registryResult.getCode()) {
                                     registryResult = Result.SUCCESS;

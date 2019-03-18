@@ -197,4 +197,30 @@ public class TaskInfo {
     public void setJobStatus(String jobStatus) {
         this.jobStatus = jobStatus;
     }
+
+    @Override
+    public String toString() {
+        return "TaskInfo{" +
+                "id=" + id +
+                ", jobGroup=" + jobGroup +
+                ", jobCron='" + jobCron + '\'' +
+                ", jobDesc='" + jobDesc + '\'' +
+                ", addTime=" + addTime +
+                ", updateTime=" + updateTime +
+                ", author='" + author + '\'' +
+                ", alarmEmail='" + alarmEmail + '\'' +
+                ", executorRouteStrategy='" + executorRouteStrategy + '\'' +
+                ", executorHandler='" + executorHandler + '\'' +
+                ", executorParam='" + executorParam + '\'' +
+                ", executorBlockStrategy='" + executorBlockStrategy + '\'' +
+                ", executorTimeout=" + executorTimeout +
+                ", executorFailRetryCount=" + executorFailRetryCount +
+                ", glueType='" + glueType + '\'' +
+                ", glueSource='" + glueSource + '\'' +
+                ", glueRemark='" + glueRemark + '\'' +
+                ", glueUpdatetime=" + glueUpdatetime +
+                ", childJobId='" + childJobId + '\'' +
+                ", jobStatus='" + jobStatus + '\'' +
+                '}';
+    }
 }

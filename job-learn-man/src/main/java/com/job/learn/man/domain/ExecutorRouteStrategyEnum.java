@@ -1,7 +1,8 @@
 package com.job.learn.man.domain;
 
+import com.job.learn.man.route.ExecutorRouteFirst;
 import com.job.learn.man.util.I18nUtil;
-import com.learn.job.core.executor.route.ExecutorRouter;
+import com.job.learn.man.route.ExecutorRouter;
 
 /**
  * 执行器枚举路由
@@ -9,7 +10,7 @@ import com.learn.job.core.executor.route.ExecutorRouter;
  * @date 2019/2/19 15:57
  */
 public enum ExecutorRouteStrategyEnum {
-//    FIRST(I18nUtil.getString("jobconf_route_first"), new ExecutorRouteFirst()),
+    FIRST(I18nUtil.getString("jobconf_route_first"), new ExecutorRouteFirst()),
 //    LAST(I18nUtil.getString("jobconf_route_last"), new ExecutorRouteLast()),
 //    ROUND(I18nUtil.getString("jobconf_route_round"), new ExecutorRouteRound()),
 //    RANDOM(I18nUtil.getString("jobconf_route_random"), new ExecutorRouteRandom()),

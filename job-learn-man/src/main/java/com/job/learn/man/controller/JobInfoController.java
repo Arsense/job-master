@@ -9,7 +9,7 @@ import com.learn.job.core.executor.domain.Result;
 import com.learn.job.core.executor.domain.TaskGroup;
 import com.learn.job.core.executor.domain.TaskInfo;
 import com.learn.job.core.executor.enums.GlueTypeEnum;
-import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
+import com.job.learn.man.route.ExecutorBlockStrategyEnum;
 import org.quartz.SchedulerException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -41,7 +41,7 @@ public class BusinessExecutorImpl implements BusinessExecutor {
             //Spring加载时就扫描加载进去了 直接get获取即可
             AbstractJobHandler newJobHandler = AbstractJobExecutor.loadJobHandler(triggerParam.getExecutorHandler());
             // valid old jobThread
-            if (jobThread!=null && jobHandler != newJobHandler) {
+            if (jobThread != null && jobHandler != newJobHandler) {
                 // change handler, need kill old thread
                 removeOldReason = "change jobhandler or glue type, and terminate the old job thread.";
                 jobThread = null;

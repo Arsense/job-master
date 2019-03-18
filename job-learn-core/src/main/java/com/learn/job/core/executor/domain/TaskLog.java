@@ -153,4 +153,25 @@ public class TaskLog {
     public void setHandleMsg(String handleMsg) {
         this.handleMsg = handleMsg;
     }
+
+    @Override
+    public String toString() {
+        return "TaskLog{" +
+                "id=" + id +
+                ", jobGroup=" + jobGroup +
+                ", jobId=" + jobId +
+                ", executorAddress='" + executorAddress + '\'' +
+                ", executorHandler='" + executorHandler + '\'' +
+                ", executorParam='" + executorParam + '\'' +
+                ", executorShardingParam='" + executorShardingParam + '\'' +
+                ", executorFailRetryCount=" + executorFailRetryCount +
+                ", triggerTime=" + triggerTime +
+                ", triggerCode=" + triggerCode +
+                ", triggerMsg='" + triggerMsg + '\'' +
+                ", handleTime=" + handleTime +
+                ", handleCode=" + handleCode +
+                ", handleMsg='" + handleMsg + '\'' +
+                ", alarmStatus=" + alarmStatus +
+                '}';
+    }
 }

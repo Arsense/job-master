@@ -1,10 +1,12 @@
 package com.learn.job.core.executor.domain;
 
+import java.io.Serializable;
+
 /**
  * @author tangwei
  * @date 2019/2/26 11:33
  */
-public class RegistryParam {
+public class RegistryParam implements Serializable {
     private String registGroup;
     private String registryKey;
     private String registryValue;
@@ -38,5 +40,14 @@ public class RegistryParam {
 
     public void setRegistryValue(String registryValue) {
         this.registryValue = registryValue;
+    }
+
+    @Override
+    public String toString() {
+        return "RegistryParam{" +
+                "registGroup='" + registGroup + '\'' +
+                ", registryKey='" + registryKey + '\'' +
+                ", registryValue='" + registryValue + '\'' +
+                '}';
     }
 }

@@ -4,7 +4,7 @@ import com.job.learn.man.config.TaskAdminConfig;
 import com.job.learn.man.schedule.TaskDynmicScheduler;
 import com.learn.job.core.executor.business.BusinessExecutor;
 import com.learn.job.core.executor.domain.*;
-import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
+import com.job.learn.man.route.ExecutorBlockStrategyEnum;
 import com.job.learn.man.domain.ExecutorRouteStrategyEnum;
 import com.job.learn.man.util.I18nUtil;
 import com.xxl.rpc.util.IpUtil;
@@ -65,7 +65,10 @@ public class TaskTrigger {
                 processTrigger(group, taskInfo, failRetryCount, triggerType, i, group.getRegistryList().size());
             }
         } else {
-
+            if (shardingParam == null) {
+                shardingParam = new int[]{0, 1};
+            }
+            processTrigger(group, taskInfo, failRetryCount, triggerType, shardingParam[0], shardingParam[1]);
         }
 
     }
@@ -125,6 +128,7 @@ public class TaskTrigger {
                 }
             }
         }
+        LOG.info("======== 执行进来了 trigger remote executor"+ jobLog);
 
         // 4、trigger remote executor
         Result<String> triggerResult = null;
@@ -134,7 +138,7 @@ public class TaskTrigger {
         } else {
             triggerResult = new Result<String>(Result.FAIL_CODE, null);
         }
-
+        LOG.info("======== 执行进来了 runExecutor" + triggerResult);
         //这里功能已完毕 到返回页面的HTML了
         // 5、collection trigger info
         StringBuffer triggerMsgSb = new StringBuffer();
@@ -157,7 +161,18 @@ public class TaskTrigger {
                         ?routeAddressResult.getMessage()+"<br><br>":"")
                 .append(triggerResult.getMessage() != null ? triggerResult.getMessage():"");
 
+        // 6、save log trigger-info
+        jobLog.setExecutorAddress(address);
+        jobLog.setExecutorHandler(taskInfo.getExecutorHandler());
+        jobLog.setExecutorParam(taskInfo.getExecutorParam());
+        jobLog.setExecutorShardingParam(shardingParam);
+        jobLog.setExecutorFailRetryCount(failRetryCount);
+        //jobLog.setTriggerTime();
+        jobLog.setTriggerCode(triggerResult.getCode());
+        jobLog.setTriggerMsg(triggerMsgSb.toString());
+        TaskAdminConfig.getAdminConfig().getTaskLogMapper().updateTriggerInfo(jobLog);
 
+        LOG.info(">>>>>>>>>>> xxl-job trigger end, jobId:{} +" + jobLog, jobLog.getId());
     }
 
     public static Result<String> runExecutor(TriggerParam triggerParam, String address){

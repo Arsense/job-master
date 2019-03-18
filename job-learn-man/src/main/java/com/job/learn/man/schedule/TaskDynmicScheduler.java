@@ -9,7 +9,7 @@ import com.job.learn.man.util.I18nUtil;
 import com.learn.job.core.executor.business.AdminBusiness;
 import com.learn.job.core.executor.business.BusinessExecutor;
 import com.learn.job.core.executor.domain.TaskInfo;
-import com.learn.job.core.executor.route.ExecutorBlockStrategyEnum;
+import com.job.learn.man.route.ExecutorBlockStrategyEnum;
 import com.xxl.rpc.remoting.invoker.call.CallType;
 import com.xxl.rpc.remoting.invoker.reference.XxlRpcReferenceBean;
 import com.xxl.rpc.remoting.invoker.route.LoadBalance;
@@ -65,7 +65,7 @@ public class TaskDynmicScheduler {
         // 初始化RPCserver
         initRpcProvider();
 
-        logger.info(">>>>>>>>> init job 调度器管理读 启动成功admin success.");
+        logger.info(">>>>>>>>> init job 调度器管理读 启动成功 admin success.");
 
     }
 

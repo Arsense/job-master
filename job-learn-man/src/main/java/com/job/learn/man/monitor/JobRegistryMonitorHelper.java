@@ -44,7 +44,6 @@ public class JobRegistryMonitorHelper {
                     if (groupList != null && !groupList.isEmpty()) {
                         // remove dead address (admin/executor)
                         TaskAdminConfig.getAdminConfig().getTaskRegistryMapper().removeDead(RegistryConfig.DEAD_TIMEOUT);
-
                         // fresh online address (admin/executor)
                         HashMap<String, List<String>> appAddressMap = new HashMap<String, List<String>>();
                         List<TaskRegistry> list = TaskAdminConfig.getAdminConfig().getTaskRegistryMapper().findAll(RegistryConfig.DEAD_TIMEOUT);
@@ -72,6 +71,7 @@ public class JobRegistryMonitorHelper {
                                 Collections.sort(registryList);
                                 addressListStr = StringUtils.join(registryList, ",");
                             }
+                            ;
                             group.setAddressList(addressListStr);
                             TaskAdminConfig.getAdminConfig().getTaskGroupMapper().updateTaskGroup(group);
                         }

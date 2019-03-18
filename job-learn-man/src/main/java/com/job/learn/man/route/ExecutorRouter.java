@@ -1,4 +1,4 @@
-package com.learn.job.core.executor.route;
+package com.job.learn.man.route;
 
 import com.learn.job.core.executor.domain.Result;
 import com.learn.job.core.executor.domain.TriggerParam;
