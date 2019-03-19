@@ -113,7 +113,7 @@ public class TaskDynmicScheduler {
 
     public static BusinessExecutor getBusinessExecutor(String address) throws Exception {
         // valid
-        if (address==null || address.trim().length()==0) {
+        if (address == null || address.trim().length() == 0) {
             return null;
         }
         //加载缓存

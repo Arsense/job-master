@@ -33,5 +33,13 @@ com.learn.job.core.executor.JobSpringExecutor
   http://www.xuxueli.com/xxl-rpc/#/‘
   为了让core端把相关的信息调度和触发信息放到数据库中
   应该这些操作都是调度器 man端处理的
+  
+
+
+## 最近总结
+其实对于这种多线程的调试 可以采取log 输出日志的方式查看进度
+之前的问题多少RPC传输的基础类序列化没有加上
+以及Jetty连接的端口与IP不一致的情况
+
 
 
